@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{467EFC33-9DDD-4302-BD04-B5C38097D7DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uge34Library", "..\Uge34Library\Uge34Library\Uge34Library.csproj", "{F60024C6-6F1E-4748-BD96-12E819BFA25D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{467EFC33-9DDD-4302-BD04-B5C38097D7DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467EFC33-9DDD-4302-BD04-B5C38097D7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467EFC33-9DDD-4302-BD04-B5C38097D7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467EFC33-9DDD-4302-BD04-B5C38097D7DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60024C6-6F1E-4748-BD96-12E819BFA25D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60024C6-6F1E-4748-BD96-12E819BFA25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60024C6-6F1E-4748-BD96-12E819BFA25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60024C6-6F1E-4748-BD96-12E819BFA25D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BBF9F3E-ED7C-4659-97EA-6FFC1E028A99}
+	EndGlobalSection
+EndGlobal
