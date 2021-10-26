@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Uge34Library.Models;
 using Uge34Library.Repo;
 using Uge34MVC.Data;
 
