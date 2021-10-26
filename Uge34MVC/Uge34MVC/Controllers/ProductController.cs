@@ -17,10 +17,12 @@ namespace Uge34MVC.Controllers
     {
         private readonly IRepository<Product> repo;
         private readonly SignInManager<User> user;
+        private readonly basketRepoWebsite basketRepo;
 
         public ProductController(ApplicationDbContext context, SignInManager<User> user)
         {
             repo = new ProductRepo(context);
+            basketRepo = new basketRepoWebsite(context);
             this.user = user;
         }
 
@@ -69,17 +71,47 @@ namespace Uge34MVC.Controllers
         }
 
 
-        //public async Task<IActionResult> Buy(int? id)
-        //{
-        //    var id1 = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        //    var basket = new Basket();
-        //    var basketContent = await _context.Basket.FindAsync(id1);
-        //    if (basketContent==null)
-        //    {
-        //        return NoContent();
-        //    }
+        public async Task<IActionResult> Buy(int? id)
+        {
+            if (id == null)
+            {
+                return NoContent();
+            }
 
-        //}
+            var userID = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var basket = new Basket();
+            basket.UserId = 1;
+
+            var basketContent = repo.GetByid(id.Value);
+            if (basketContent == null)
+            {
+                return NoContent();
+            }
+            basket.TotalPrice += basketContent.Price;
+            basket.BasketAmount += basketContent.Amount;
+            var exsist = basketRepo.GetByid(basket.UserId);
+            if (exsist == null)
+            {
+                basketRepo.CreateProduct(basket);
+                return Ok();
+            }
+            else
+            {
+                basketRepo.Update(basket);
+            }
+            
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult ShowBasket()
+        {
+            basketRepo.GetByid(1);
+            var list = repo.GetAll().Where(x => x.Basket.UserId == 1);
+
+            return View(list);
+
+        }
 
         // GET: Product/Edit/5
         public IActionResult Edit(int? id)
