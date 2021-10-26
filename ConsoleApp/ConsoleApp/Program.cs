@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Uge34Library;
+using Uge34Library.Repo;
 
 namespace Uge34Library.Models
 {
@@ -30,8 +31,8 @@ namespace Uge34Library.Models
                 case "2":
                     {
 
-                        createProduct product= new createProduct();
-                        product.CreateProduct();
+                        //createProduct product= new createProduct();
+                        //product.CreateProduct();
                         break;
                     }
 
