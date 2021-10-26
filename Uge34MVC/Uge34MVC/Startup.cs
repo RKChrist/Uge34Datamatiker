@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Uge34Library.Models;
+using Uge34Library.Repo;
 using Uge34MVC.Data;
 
 namespace Uge34MVC
@@ -35,6 +35,7 @@ namespace Uge34MVC
 
             services.AddDefaultIdentity<User>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddTransient<ProductRepo>();
             services.AddControllersWithViews();
 
             services.AddDbContext<ProductDataContext>(options =>
