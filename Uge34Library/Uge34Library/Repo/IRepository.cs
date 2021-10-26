@@ -14,7 +14,7 @@ namespace Uge34Library.Repo
         
         void Update(T obj);
 
-        void DeleteProduct(int id);
+        void DeleteProduct(T obj);
 
         T GetByid(int id);
 

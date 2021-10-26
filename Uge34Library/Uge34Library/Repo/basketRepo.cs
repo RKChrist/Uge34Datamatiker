@@ -14,7 +14,7 @@ namespace Uge34Library.Repo
             throw new NotImplementedException();
         }
 
-        public void DeleteProduct(int id)
+        public void DeleteProduct(Product obj)
         {
             throw new NotImplementedException();
         }

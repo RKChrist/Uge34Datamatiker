@@ -42,7 +42,6 @@ namespace Uge34Library.Repo
 
         public void Update(Product obj)
         {
-            table.Attach(obj);
             table.Update(obj);
         }
     }
