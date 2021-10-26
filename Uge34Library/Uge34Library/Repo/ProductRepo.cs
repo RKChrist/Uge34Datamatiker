@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +11,15 @@ namespace Uge34Library.Repo
     public class ProductRepo : IRepository<Product>
     {
 
-        private IdentityDbContext _context;
+        private DbContext _context;
         private DbSet<Product> table;
 
-        public ProductRepo(IdentityDbContext _context)
+        public ProductRepo(DbContext _context)
         {
             this._context = _context;
             table = _context.Set<Product>();
         }
+
         public void CreateProduct(Product obj)
         {
             table.Add(obj);
