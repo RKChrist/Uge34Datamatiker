@@ -11,8 +11,6 @@ namespace Uge34Library.Models
     public class User : IdentityUser
     {
 
-        [Key]
-        public int UserId { get; set; }
         public string Name { get; set; }
         public string PassWord { get; set; }
         public string Mail { get; set; }

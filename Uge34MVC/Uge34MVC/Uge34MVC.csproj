@@ -4,6 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>aspnet-Uge34MVC-DC55F0F5-89BE-4142-B8A7-30976CBF8972</UserSecretsId>
     <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+	  <BaseOutPutPath>..\Uge34MVC\bin\</BaseOutPutPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,18 +20,15 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\..\Uge34Library\Uge34Library\Uge34Library.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\Uge34Library\Uge34Library\Uge34Library.csproj" />
+	</ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Uge34Library\Uge34Library\Uge34Library.csproj" />
-  </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Migrations\" />
-    <Folder Include="Migrations\" />
-    <Folder Include="Migrations\ApplicationDb\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Uge34Library\Uge34Library\Uge34Library.csproj" />
+	    <Folder Include="Data\Migrations\" />
   </ItemGroup>
 
 </Project>

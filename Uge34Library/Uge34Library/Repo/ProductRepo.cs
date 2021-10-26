@@ -1,10 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Uge34Library.Data;
 using Uge34Library.Models;
 
 namespace Uge34Library.Repo
@@ -12,10 +12,10 @@ namespace Uge34Library.Repo
     public class ProductRepo : IRepository<Product>
     {
 
-        private ApplicationDbContext _context;
+        private IdentityDbContext _context;
         private DbSet<Product> table;
 
-        public ProductRepo(ApplicationDbContext _context)
+        public ProductRepo(IdentityDbContext _context)
         {
             this._context = _context;
             table = _context.Set<Product>();
@@ -23,6 +23,7 @@ namespace Uge34Library.Repo
         public void CreateProduct(Product obj)
         {
             table.Add(obj);
+            _context.SaveChanges();
         }
 
         public void DeleteProduct(Product obj)

@@ -7,14 +7,15 @@ using Uge34Library.Models;
 
 namespace Uge34MVC.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<User>
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-
         public DbSet<Uge34Library.Models.Product> Product { get; set; }
         public DbSet<Basket> Basket { get; set; }
+        public DbSet<User> User { get; set; }
+
     }
 }
