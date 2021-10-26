@@ -9,7 +9,7 @@ namespace Uge34Library.Models
         static void Main(string[] args)
         {
             Menu mainMenu = new Menu("Webshop Menu");
-            DirectoryInfo[] Prod = new DirectoryInfo(@"c:\").GetDirectories();
+            //DirectoryInfo[] Prod = new DirectoryInfo(@"c:\").GetDirectories();
 
 
             mainMenu.AddMenuItem("1. Vis Produkt");
@@ -25,12 +25,14 @@ namespace Uge34Library.Models
             {
                 case "1":
                     {
+                        Product product = new Product();
+                        product.ShowProduct();
                         break;
                     }
                 case "2":
                     {
 
-                        createProduct product= new createProduct();
+                        Product product= new Product();
                         product.CreateProduct();
                         break;
                     }
