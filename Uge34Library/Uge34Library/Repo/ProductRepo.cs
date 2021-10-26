@@ -29,6 +29,7 @@ namespace Uge34Library.Repo
         public void DeleteProduct(Product obj)
         {
             table.Remove(obj);
+            _context.SaveChanges();
         }
 
         public List<Product> GetAll()
@@ -44,6 +45,7 @@ namespace Uge34Library.Repo
         public void Update(Product obj)
         {
             table.Update(obj);
+            _context.SaveChanges();
         }
     }
 }
