@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Uge34Library.Models;
 
 namespace Uge34MVC.Data
 {
@@ -12,5 +13,9 @@ namespace Uge34MVC.Data
             : base(options)
         {
         }
+        public DbSet<Uge34Library.Models.Product> Product { get; set; }
+        public DbSet<Basket> Basket { get; set; }
+        public DbSet<User> User { get; set; }
+
     }
 }
